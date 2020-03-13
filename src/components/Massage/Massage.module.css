@@ -1,0 +1,75 @@
+.messenger_container{
+  display: flex;
+  max-width: 1200px;
+  height: 500px;
+
+}
+.messenger_penFriends{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-right: 20px;
+  background-color: #fff;
+  box-shadow: 0px 1px 15px 0px rgba(51, 51, 51, 0.2);
+  overflow-y: auto;
+}
+.messenger_letterSpace{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 70%;
+  background-color: #fff;
+  box-shadow: 0px 1px 15px 0px rgba(51, 51, 51, 0.2);
+}
+
+
+.messenger_messages{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+  overflow: auto;
+  max-width: 80%;
+
+
+
+}
+.massage{
+  margin: 10px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 10px;
+  padding: .5rem ;
+  background-color: aliceblue;
+  max-width: 500px;
+}
+.form_container{
+  width: 100%;
+}
+.messenger_form{
+  display: flex;
+  padding: 5px 5px;
+  align-items: center;
+}
+
+.messenger_form textarea{
+  resize: none;
+  width: 700px;
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid tomato;
+}
+.messenger_button{
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 15px;
+  border-radius: 10px;
+  outline: none;
+  height: 25px;
+  width: 100px;
+  color: #ffffff;
+  font-weight: bolder;
+  background-color: tomato;
+}

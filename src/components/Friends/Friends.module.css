@@ -1,0 +1,17 @@
+.img{
+	margin: 0 auto;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	width: 20px;
+	border-radius: 50%;
+
+}
+.container{
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.friend{
+	margin-left: 15px;
+}

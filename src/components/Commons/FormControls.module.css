@@ -1,0 +1,29 @@
+
+
+.formControl{
+	display: flex;
+	flex-direction: column;
+}
+
+.formControl.error textarea {
+	border: 1px solid red;
+}
+.formControl.error input {
+	border: 1px solid tomato;
+}
+
+
+.formControl span{
+
+	tomato: red;
+}
+
+.commonerror{
+	border: 1px solid red;
+
+	color: tomato;
+}
+
+.error{
+	color:tomato;
+}

@@ -1,0 +1,120 @@
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    max-width: 580px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 15px 0px rgba(51, 51, 51, 0.2);
+}
+.form textarea{
+
+    resize: none;
+    width: 400px;
+    height: 50px;
+    border: none;
+
+
+}
+.form_button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_button button{
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 15px;
+    border-radius: 10px;
+    outline: none;
+    height: 25px;
+    width: 100px;
+    color: #ffffff;
+    font-weight: bolder;
+    background-color: tomato;
+}
+
+.form_button button:active{
+    background-color: indianred;
+
+}
+.post_container{
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #fff;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    box-shadow: 0px 1px 15px 0px rgba(51, 51, 51, 0.2);
+}
+.post_header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.post_header_photo{
+    width: 41px;
+    margin-right: 10px;
+}
+.userPhoto{
+    width: 100%;
+    display: block;
+}
+
+.post_header{
+    display: flex;
+}
+.post_header span{
+    display: block;
+    font-weight: bolder;
+
+}
+.post_header span:nth-child(2){
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: normal;
+    color:#666666;
+}
+.post_body{
+    margin-bottom: 10px;
+}
+.post_body p {
+    line-height: 1.5;
+    color: #444444;
+}
+.post_footer{
+    display: flex;
+    justify-content: space-between;
+    color:#666666;
+}
+
+.post_footer .post_footer_info span{
+    margin-left: 20px;
+}
+.post_footer .icon{
+    margin-right: 5px;
+    color: tomato;
+    font-size: 18px;
+}
+.post_footer_information{
+    transition: .2s linear;
+}
+.post_footer_information:hover{
+    color: tomato;
+    cursor: pointer;
+    transition: .2s linear;
+
+}
+.post_body_message{
+    width: 90%;
+}

@@ -1,0 +1,43 @@
+.navigation_container{
+    width: 100%;
+}
+.navigation_links_container{
+    width: 100%;
+    background-color: #fff;
+}
+.navigation{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-area: nav;
+    background-color:#ffffff ;
+    grid-auto-rows: minmax(50px,auto);
+
+}
+.navigation_links{
+    justify-self: end;
+    align-self: center;
+}
+.navigation .navigation_link{
+    margin-right: 20px;
+    color: #333333;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+
+.banner_container{
+
+    height: 300px;
+}
+.banner{
+    display: block;
+    width: 100%;
+}
+.navigation .navigation_link:first-child{
+    margin-left: 0px;
+}
+.navigation .active{
+    color: tomato;
+}
