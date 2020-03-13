@@ -2,7 +2,12 @@
 
 
 }
-
+.preloaderContainer{
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+}
 div{
   word-wrap: break-word;
 }

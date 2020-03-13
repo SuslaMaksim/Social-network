@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://suslamaksim.github.io/Social-network/.",
+  "homepage": "https://suslamaksim.github.io/Social-network",
   "dependencies": {
     "axios": "^0.19.0",
     "font-awesome": "^4.7.0",
