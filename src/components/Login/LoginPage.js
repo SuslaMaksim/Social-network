@@ -57,6 +57,7 @@ const Login = (props) => {
 				
 				<div className={css.button_container}>
 						<button>Login</button>
+					    <button onClick={props.guestLogin}>Guest Login</button>
 				</div>
 
         </form>
@@ -77,6 +78,7 @@ let loginForm = (props)=>{
 	
 
 	let submit = formData => props.login(formData.email,formData.password,formData.rememberMe,formData.captca)
+	let guestLogin = () => props.login("janeshapovalova@gmail.com","guest12345",false,null)
 	if(props.auth) return <Redirect to ={'/contant'}/>
 
 
@@ -84,7 +86,7 @@ let loginForm = (props)=>{
 		<div className={css.loginForm_container}>
 			<div className={css.loginForm}>
 				<h1>Login</h1>
-				<LoginReduxForm onSubmit={submit} captchaUrl ={props.captchaUrl}/>
+				<LoginReduxForm onSubmit={submit} captchaUrl ={props.captchaUrl} guestLogin={guestLogin}/>
 			</div>
 		</div>
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../img/1.png';
 import {NavLink} from 'react-router-dom';
 import H from './Header.module.css'
 

@@ -72,10 +72,16 @@
 .captha .captha_input{
     margin-top: 10px;
 }
+.button_container{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .button_container button:active{
     background-color: indianred;
 }
+
 .container_error{
     margin-top: 5px;
 }
