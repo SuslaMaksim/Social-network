@@ -9,8 +9,11 @@ let Preloader = ()=>{
 		return(
 			<div className={css.preloader_container}>
 				<div className={css.preloader}>
-					<h1>Нжно заплатить</h1>
-					<img className={css.preloader_img} src={preloader}/>
+					<div>
+						<img src={preloader} className={css.preloader_img}/>
+					</div>
+
+
 				</div>
 			</div>
 
