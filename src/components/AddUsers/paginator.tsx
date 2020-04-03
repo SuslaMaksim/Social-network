@@ -3,10 +3,16 @@ import css from './Paginator.module.css';
 
 
 
+type PropsType = {
+	totalCounter: number,
+	pageSize: number,
+	page: number,
+	changePage: (page:number)=> void,
+	countPage?: number
+}
 
 
-
-let Paginator = React.memo(({totalCounter,pageSize,page,changePage,countPage = 10})=>{
+let Paginator: React.FC<PropsType> = React.memo(({totalCounter,pageSize,page,changePage,countPage = 10})=>{
 
 let totalPage = Math.ceil (totalCounter / pageSize);
 let pages = [];

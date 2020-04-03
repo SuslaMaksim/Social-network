@@ -1,7 +1,7 @@
 import React from 'react';
 import Profile from './Profile.js';
 import {connect} from 'react-redux';
-import {setProfile,getStatus,updateStatus,savePhoto,updateDataUser} from '../../reducer/reducer-content.js';
+import {setProfile,getStatus,updateStatus,savePhoto,updateDataUser} from '../../reducer/reducer-content';
 import {withRouter} from 'react-router-dom';
 import {withAuthRedirect} from '../Hoc/Hoc.js';
 import {compose} from 'redux'
@@ -32,7 +32,7 @@ class ContainerProfile extends React.Component{
 		
 	}
 	componentDidUpdate(prevProps,prevState,snapshot){
-		if(this.props.match.params.userID != prevProps.match.params.userID){
+		if(this.props.match.params.userID !== prevProps.match.params.userID){
 			this.refreshProfile();
 		}
 	}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Messages from './Massages.js';
 import {connect} from 'react-redux';
-import {addPost,setPenfriendUser} from '../../reducer/reducer-content.js';
+import {addPost,setPenfriendUser} from '../../reducer/reducer-content';
 import {withAuthRedirect} from '../Hoc/Hoc.js';
 import {compose} from 'redux';
 import {withRouter} from 'react-router-dom';
@@ -12,7 +12,7 @@ class ContainerMasseges extends React.Component{
     componentDidMount() {
 
         if(this.props.match.params.friendID){
-            this.props.setPenfriendUser(this.props.match.params.friendID)
+            this.props.setPenfriendUser(Number(this.props.match.params.friendID))
         }else{
             this.props.setPenfriendUser(1)
             this.props.history.push(`/message/1`);
@@ -21,7 +21,7 @@ class ContainerMasseges extends React.Component{
     componentDidUpdate(prevProps, prevState, snapshot) {
 
         if(this.props.match.params.friendID !== prevProps.match.params.friendID){
-            this.props.setPenfriendUser(this.props.match.params.friendID)
+            this.props.setPenfriendUser(Number(this.props.match.params.friendID))
         }
     }
 

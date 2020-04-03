@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-import HeaderContainer from './components/Header/HeaderContainer.js';
+import HeaderContainer from './components/Header/HeaderContainer';
 import Navigation from './components/Navigation';
-import ContainerProfile from './components/Profile/ProfileConteiner.js';
-import ContainerMasseges from './components/Massage/ContainerMasseges.js';
-import ContainerAddUsers from './components/AddUsers/ContainerAddUsers.js';
-import LoginPage from './components/Login/LoginPage.js';
+import ContainerProfile from './components/Profile/ProfileConteiner';
+import ContainerMasseges from './components/Massage/ContainerMasseges';
+import ContainerAddUsers from './components/AddUsers/ContainerAddUsers';
+import LoginPage from './components/Login/LoginPage';
 import {Route,withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {initialization} from './reducer/app-reducer.js';
-import Preloader from './components/AddUsers/Preloader.js';
+import {initialization} from './reducer/app-reducer';
+import Preloader from './components/AddUsers/Preloader';
 import {compose} from 'redux';
 
 

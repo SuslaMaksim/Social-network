@@ -1,13 +1,13 @@
 import React from 'react';
 import {Field,reduxForm} from 'redux-form';
-import {Input} from '../Commons/FormControls.js';
-import {required,maxLengthCreator} from '../../validator/validator.js';
+import {Input} from '../Commons/FormControls';
+import {required,maxLengthCreator} from '../../validator/validator';
 import {connect} from 'react-redux';
-import {login} from '../../reducer/reducer-header.js';
+import {login} from '../../reducer/reducer-header';
 import {Redirect} from 'react-router-dom';
 import css from './LoginPage.module.css';
 
-import {fieldCreator} from '../Helper/Helper.js';
+import {fieldCreator} from '../Helper/Helper';
 
 
 

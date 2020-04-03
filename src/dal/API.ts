@@ -1,5 +1,6 @@
 
-import * as axios from "axios";
+import axios from "axios";
+import {profileUserType} from "../reducer/types/types";
 
 
 const instanse = axios.create({
@@ -13,22 +14,22 @@ const instanse = axios.create({
 
 export const usersAPI = {
 
-  getUsers(page,pageSize){      
+  getUsers(page:number,pageSize:number){
        return  instanse.get(`users?page=${page}&count=${pageSize}`)
                .then(response => response.data)
   },
 
-  followUsers(id){      
+  followUsers(id:number){
        return  instanse.post(`follow/${id}`)
                .then(response => response.data)
   } ,
 
-   unFollowUsers(id){      
+   unFollowUsers(id:number){
        return  instanse.delete(`follow/${id}`)
                .then(response => response.data)
   },
   
-  getProfile(id){
+  getProfile(id:number){
     console.warn("Obsolete Method, Please profileAPI object")
       return profileAPI.getProfile(id);
                 
@@ -38,23 +39,23 @@ export const usersAPI = {
 
 export const profileAPI = {
 
-  getProfile(id){
+  getProfile(id:number){
       return instanse.get(`profile/${id}`)
                 .then (response => response.data)
                 
   },
 
-  getStatus(id){
+  getStatus(id:number){
     return instanse.get(`profile/status/${id}`)
                 .then(response => response.data)
   },
 
-  setStatus(status){
+  setStatus(status:string){
     return instanse.put(`profile/status`, {status})
                 .then(response => response.data)
   },
 
-   savePhoto(photo){
+   savePhoto(photo:any){
 
     const formData = new FormData();
     formData.append('image',photo);
@@ -66,40 +67,53 @@ export const profileAPI = {
     })
                 .then(response => response.data)
   },
-  saveDataUser(file){
-      return instanse.put(`profile`, file)
+  saveDataUser(profile:profileUserType){
+      return instanse.put(`profile`, profile)
                 .then(response => response.data)
   }
 
 
 }
+export enum ResultCodesEnum {
+    Success = 0,
+    Error = 1
+}
+export enum ResultCodesEnumFoCaptcha {
+    CaptchaIsRequired = 10
+}
 
+type meResponseType = {
+    data: {id: number, email: string, login: string }
+    resultCode: ResultCodesEnum
+    messages: Array<string>
+}
 
+type LoginResponseType = {
+    data: {userId: number}
+    resultCode: ResultCodesEnum | ResultCodesEnumFoCaptcha
+    messages: Array<string>
+}
 
 export const auth = {
 
     me(){
-    return instanse.get(`auth/me`)
+    return instanse.get<meResponseType>(`auth/me`)
                 .then(response => response.data)
   },
 
 
-  login(email,password,rememberMe = false,captcha = null){
-       return instanse.post(`auth/login`, {email,password,rememberMe,captcha})
+  login(email:string,password:string,rememberMe = false,captcha: null | string = null){
+       return instanse.post<LoginResponseType>(`auth/login`, {email,password,rememberMe,captcha})
                
 
   },
   logout(){
-
        return instanse.delete(`auth/login`);
-
   },
   getCaptcha(){
        return instanse.get(`security/get-captcha-url`)
-               
-
 
   }
 
-
 }
+

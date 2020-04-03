@@ -3,7 +3,7 @@ import Content from './Content.js';
 import {connect} from 'react-redux';
 
 
-import {addMessage} from "../reducer/reducer-posts.js"
+import {addMessage} from "../reducer/reducer-posts"
 
 
 

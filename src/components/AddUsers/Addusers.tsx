@@ -1,16 +1,23 @@
 import React from 'react';
 import css from './AddUsers.module.css';
+import Paginator from './paginator';
+import User from "./User";
+import {UserType} from "../../reducer/types/types";
 
 
-import {usersAPI} from '../../dal/API.js';
-import Paginator from './paginator.js';
+type PropsType = {
+	totalCounter: number,
+	pageSize: number,
+	page:number,
+	users: Array<UserType>,
 
-import User from "./User.js";
+	changePage: (page:number)=> void,
+	followToUser: (id:number)=> void,
+	unFollow: (id:number)=> void,
+	followingInProgress: Array<number>
+}
 
-
-
-
-let  AddUsers =(props)=> {
+let  AddUsers: React.FC<PropsType> =(props)=> {
 
 
 	
@@ -29,7 +36,10 @@ let  AddUsers =(props)=> {
 
                                                    />)}
 				</div>
-				<Paginator changePage = {props.changePage } totalCounter ={props.totalCounter}  pageSize= {props.pageSize} page={props.page}/>
+				<Paginator changePage = {props.changePage }
+						   totalCounter ={props.totalCounter}
+						   pageSize= {props.pageSize}
+						   page={props.page}/>
 
 			</div>
 
